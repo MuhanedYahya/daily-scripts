@@ -1,0 +1,12 @@
+[Unit]
+Description=Update Ubuntu System after User Login
+After=graphical.target
+
+[Service]
+ExecStart=system-login-update
+Type=oneshot
+RemainAfterExit=true
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=default.target
