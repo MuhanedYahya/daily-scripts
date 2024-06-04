@@ -3,7 +3,7 @@ Description=Update Ubuntu System after User Login
 After=graphical.target
 
 [Service]
-ExecStart=system-login-update
+ExecStart=/home/%USER%/.local/bin/system_login_update
 Type=oneshot
 RemainAfterExit=true
 Environment=DISPLAY=:0
